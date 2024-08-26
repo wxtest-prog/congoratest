@@ -37,3 +37,8 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+.env
+
+# Local Netlify folder
+.netlify

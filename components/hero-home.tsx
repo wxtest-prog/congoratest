@@ -6,6 +6,12 @@ import Avatar03 from "@/public/images/avatar-03.jpg";
 import Avatar04 from "@/public/images/avatar-04.jpg";
 import Avatar05 from "@/public/images/avatar-05.jpg";
 import Avatar06 from "@/public/images/avatar-06.jpg";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions } from '@mui/material';
+import Link from "next/link";
 
 export default function HeroHome() {
   return (
@@ -70,8 +76,8 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              The website builder you're <br className="max-lg:hidden" />
-              looking for
+              Connect with Qualified <br className="max-lg:hidden" />
+              Subcontractors
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
@@ -79,8 +85,7 @@ export default function HeroHome() {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                Simple is a modern website builder powered by AI that changes
-                how companies create user interfaces together.
+                Congora is the modern way to find partners for your projects.
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
                 <div
@@ -90,10 +95,10 @@ export default function HeroHome() {
                 >
                   <a
                     className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                    href="#0"
+                    href="/signin"
                   >
                     <span className="relative inline-flex items-center">
-                      Start Free Trial{" "}
+                      Post a Job{" "}
                       <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
                         -&gt;
                       </span>
@@ -101,9 +106,9 @@ export default function HeroHome() {
                   </a>
                   <a
                     className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                    href="#0"
+                    href="/signin"
                   >
-                    Learn More
+                    Become a Subcontractor
                   </a>
                 </div>
               </div>
@@ -118,31 +123,121 @@ export default function HeroHome() {
             <div className="relative aspect-video rounded-2xl bg-gray-900 px-5 py-3 shadow-xl before:pointer-events-none before:absolute before:-inset-5 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] after:absolute after:-inset-5 after:-z-10 after:border-x after:[border-image:linear-gradient(to_bottom,transparent,theme(colors.slate.300/.8),transparent)1]">
               <div className="relative mb-8 flex items-center justify-between before:block before:h-[9px] before:w-[41px] before:bg-[length:16px_9px] before:[background-image:radial-gradient(circle_at_4.5px_4.5px,_theme(colors.gray.600)_4.5px,_transparent_0)] after:w-[41px]">
                 <span className="text-[13px] font-medium text-white">
-                  cruip.com
+                  congora.io
                 </span>
               </div>
               <div className="font-mono text-gray-500 [&_span]:opacity-0">
                 <span className="animate-[code-1_10s_infinite] text-gray-200">
-                  npm login
+                <Card className="border-4 border-gray-300" sx={{ maxWidth: 800 }}>
+      <CardActionArea>
+      <Image
+                  className="box-content rounded-full border-2 border-gray-50 p-2"
+                  src={Avatar03}
+                  width={32}
+                  height={32}
+                  alt="Avatar 01"
+                />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Light Fixtures
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+      <Link
+                href="/"
+                className="btn-sm bg-gray-600 text-gray-200 shadow hover:bg-gray-900"
+              >
+                Bid on this Job
+              </Link>
+              <Link
+                href="/"
+                className="btn-sm bg-blue-500 text-gray-200 shadow hover:bg-gray-900"
+              >
+                10-30k
+              </Link>
+      </CardActions>
+    </Card>
                 </span>{" "}
+                <br />
+                <br />
                 <span className="animate-[code-2_10s_infinite]">
-                  --registry=https://npm.pkg.github.com
+                <Card className="border-4 border-gray-300" sx={{ maxWidth: 800 }}>
+      <CardActionArea>
+      <Image
+                  className="box-content rounded-full border-2 border-gray-50 p-2"
+                  src={Avatar06}
+                  width={32}
+                  height={32}
+                  alt="Avatar 01"
+                />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            New Drywall
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+      <Link
+                href="/"
+                className="btn-sm bg-gray-600 text-gray-200 shadow hover:bg-gray-900"
+              >
+                Bid on this Job
+              </Link>
+              <Link
+                href="/"
+                className="btn-sm bg-blue-500 text-gray-200 shadow hover:bg-gray-900"
+              >
+                100k
+              </Link>
+      </CardActions>
+    </Card>
                 </span>
                 <br />
-                <span className="animate-[code-3_10s_infinite]">
-                  --scope=@phanatic
-                </span>{" "}
-                <span className="animate-[code-4_10s_infinite]">
-                  Successfully logged-in.
-                </span>
                 <br />
-                <br />
-                <span className="animate-[code-5_10s_infinite] text-gray-200">
-                  npm publish
-                </span>
-                <br />
-                <span className="animate-[code-6_10s_infinite]">
-                  Package published.
+                <span className="animate-[code-2_10s_infinite]">
+                <Card className="border-4 border-gray-300" sx={{ maxWidth: 800 }}>
+      <CardActionArea>
+      <Image
+                  className="box-content rounded-full border-2 border-gray-50 p-2"
+                  src={Avatar01}
+                  width={32}
+                  height={32}
+                  alt="Avatar 01"
+                />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Roofing
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+      <Link
+                href="/"
+                className="btn-sm bg-gray-600 text-gray-200 shadow hover:bg-gray-900"
+              >
+                Bid on this Job
+              </Link>
+              <Link
+                href="/"
+                className="btn-sm bg-blue-500 text-gray-200 shadow hover:bg-gray-900"
+              >
+                5-7k
+              </Link>
+      </CardActions>
+    </Card>
                 </span>
               </div>
             </div>

@@ -1,13 +1,14 @@
 import Image from "next/image";
-import Logo01 from "@/public/images/logo-01.svg";
-import Logo02 from "@/public/images/logo-02.svg";
-import Logo03 from "@/public/images/logo-03.svg";
-import Logo04 from "@/public/images/logo-04.svg";
-import Logo05 from "@/public/images/logo-05.svg";
-import Logo06 from "@/public/images/logo-06.svg";
-import Logo07 from "@/public/images/logo-07.svg";
-import Logo08 from "@/public/images/logo-08.svg";
-import Logo09 from "@/public/images/logo-09.svg";
+import Logo01 from "../public/images/logo-01.png";
+import Logo02 from "../public/images/logo-02.png";
+import Logo03 from "../public/images/logo-03.png";
+import Logo04 from "../public/images/logo-04.png";
+import Logo05 from "../public/images/logo-05.png";
+import Logo06 from "../public/images/logo-06.png";
+import Logo07 from "../public/images/logo-07.png";
+import Logo08 from "../public/images/logo-08.png";
+import Logo09 from "../public/images/logo-01.png";
+import logo from "../public/images/Logo.png";
 
 export default function BusinessCategories() {
   return (
@@ -179,9 +180,9 @@ export default function BusinessCategories() {
                 <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                   <Image
                     className="relative"
-                    src={Logo01}
-                    width={32}
-                    height={32}
+                    src={logo}
+                    width={65}
+                    height={65}
                     alt="Logo 01"
                   />
                 </div>
@@ -196,8 +197,8 @@ export default function BusinessCategories() {
                       <Image
                         className="relative"
                         src={Logo02}
-                        width={23}
-                        height={22}
+                        width={50}
+                        height={50}
                         alt="Logo 02"
                       />
                     </div>
@@ -209,8 +210,8 @@ export default function BusinessCategories() {
                       <Image
                         className="relative"
                         src={Logo03}
-                        width={22}
-                        height={22}
+                        width={50}
+                        height={50}
                         alt="Logo 03"
                       />
                     </div>
@@ -222,8 +223,8 @@ export default function BusinessCategories() {
                       <Image
                         className="relative"
                         src={Logo04}
-                        width={24}
-                        height={22}
+                        width={50}
+                        height={50}
                         alt="Logo 04"
                       />
                     </div>
@@ -235,8 +236,8 @@ export default function BusinessCategories() {
                       <Image
                         className="relative"
                         src={Logo05}
-                        width={25}
-                        height={25}
+                        width={50}
+                        height={50}
                         alt="Logo 05"
                       />
                     </div>
@@ -248,8 +249,8 @@ export default function BusinessCategories() {
                       <Image
                         className="relative"
                         src={Logo06}
-                        width={20}
-                        height={18}
+                        width={50}
+                        height={50}
                         alt="Logo 06"
                       />
                     </div>
@@ -261,8 +262,8 @@ export default function BusinessCategories() {
                       <Image
                         className="relative"
                         src={Logo07}
-                        width={25}
-                        height={25}
+                        width={50}
+                        height={50}
                         alt="Logo 07"
                       />
                     </div>
@@ -274,8 +275,8 @@ export default function BusinessCategories() {
                       <Image
                         className="relative"
                         src={Logo08}
-                        width={20}
-                        height={20}
+                        width={30}
+                        height={30}
                         alt="Logo 08"
                       />
                     </div>
@@ -287,8 +288,8 @@ export default function BusinessCategories() {
                       <Image
                         className="relative"
                         src={Logo09}
-                        width={21}
-                        height={13}
+                        width={30}
+                        height={30}
                         alt="Logo 09"
                       />
                     </div>

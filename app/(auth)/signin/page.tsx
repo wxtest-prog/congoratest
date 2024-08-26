@@ -1,68 +1,100 @@
-export const metadata = {
-  title: "Sign In - Simple",
-  description: "Page description",
-};
+'use client';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 import Link from "next/link";
 
 export default function SignIn() {
+
+
+    const [ result,showresult ] = useState(false);
+
+    const Result = () => {
+        return (
+            <p className="success-message">Your Message has been successfully sent. I will contact you soon.</p>
+        )
+    }
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs
+        .sendForm(
+            'service_1p0sr2u', 
+            'template_91knf7t', 
+            e.target,
+             'BJhvAmcZrPtgQr8Ji'
+        )
+        .then((result) => {
+            console.log(result.text);
+            }, 
+            (error) => {
+                console.log(error.text);
+            }
+        );
+        e.target.reset();
+        showresult(true);
+    };
+
+    setTimeout(() => {
+        showresult(false);
+    }, 5000);
+
+
   return (
+
+    
     <>
       <>
         <div className="mb-10">
-          <h1 className="text-4xl font-bold">Sign in to your account</h1>
+          <h1 className="text-4xl font-bold content-center">Sign Up For Our Waitlist</h1>
         </div>
         {/* Form */}
-        <form>
-          <div className="space-y-4">
-            <div>
-              <label
-                className="mb-1 block text-sm font-medium text-gray-700"
-                htmlFor="email"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                className="form-input w-full py-2"
+        <form className="grid gap-6 mb-6 md:grid-cols-1 px-20" action="" onSubmit={sendEmail}> 
+        <div className="form-group">
+                <input className="rounded-lg"
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                />
+            </div>
+
+            <div className="rounded-md">
+                <input className="rounded-lg"
+                type="text"
+                name="company"
+                placeholder="Company"
+                required
+                />
+            </div>
+
+            <div className="rounded-md">
+                <input className="rounded-lg"
                 type="email"
-                placeholder="corybarker@email.com"
+                name="email"
+                placeholder="Email Address"
                 required
-              />
+                />
             </div>
-            <div>
-              <label
-                className="mb-1 block text-sm font-medium text-gray-700"
-                htmlFor="password"
-              >
-                Password
-              </label>
-              <input
-                id="password"
-                className="form-input w-full py-2"
-                type="password"
-                autoComplete="on"
-                placeholder="••••••••"
+
+            <div className="">
+                <input className="rounded-lg"
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
                 required
-              />
+                />
             </div>
-          </div>
-          <div className="mt-6">
-            <button className="btn w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%]">
-              Sign In
-            </button>
-          </div>
+
+            <div className="form-group">
+                <button className="btn-sm bg-gray-300 text-gray-800 shadow hover:bg-gray-50 mx-16" >Submit Now</button>
+            </div>
         </form>
-        {/* Bottom link */}
-        <div className="mt-6 text-center">
-          <Link
-            className="text-sm text-gray-700 underline hover:no-underline"
-            href="/reset-password"
-          >
-            Forgot password
-          </Link>
-        </div>
+
+        <div className="text-green-500">
+                {result ? <Result /> : null}
+            </div> 
       </>
     </>
   );
-}
+  }
