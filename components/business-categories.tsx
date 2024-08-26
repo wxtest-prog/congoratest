@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Logo01 from "../public/images/logo-01.png";
-import Logo02 from "../public/images/logo-02.png";
-import Logo03 from "../public/images/logo-03.png";
-import Logo04 from "../public/images/logo-04.png";
-import Logo05 from "../public/images/logo-05.png";
-import Logo06 from "../public/images/logo-06.png";
-import Logo07 from "../public/images/logo-07.png";
-import Logo08 from "../public/images/logo-08.png";
-import Logo09 from "../public/images/logo-01.png";
+import Logo02 from "../public/images/Logo-02.png";
+import Logo03 from "../public/images/Logo-03.png";
+import Logo04 from "../public/images/Logo-04.png";
+import Logo05 from "../public/images/Logo-05.png";
+import Logo06 from "../public/images/Logo-06.png";
+import Logo07 from "../public/images/Logo-07.png";
+import Logo08 from "../public/images/Logo-08.png";
+import Logo09 from "../public/images/Logo-01.png";
 import logo from "../public/images/Logo.png";
 
 export default function BusinessCategories() {
